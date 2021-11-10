@@ -1,19 +1,26 @@
 import * as React from "react"
 
-// data
+// plugins
+import { StaticImage } from "gatsby-plugin-image"
 
+// data
 
 // markup
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
+// Images
+import LogoShortImg from '../images/logo_short_patientgrid_multi.svg'
+
+
+const navigation = []
+
+//  { name: 'Product', href: '#' },
+//  { name: 'Features', href: '#' },
+//  { name: 'Marketplace', href: '#' },
+//  { name: 'Company', href: '#' },
+//]
 
 export default function Example() {
   return (
@@ -55,8 +62,8 @@ export default function Example() {
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
+                    src={LogoShortImg}
+                    alt="Logo"
                   />
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
@@ -104,7 +111,7 @@ export default function Example() {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                      src={LogoShortImg}
                       alt=""
                     />
                   </div>
@@ -155,7 +162,8 @@ export default function Example() {
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">Sign up to get notified when it’s ready.</p>
-                <form action="#" method="POST" className="mt-3 sm:flex">
+                
+                <form name="contact" method="POST" data-netlify="true" className="mt-3 sm:flex">
                   <label htmlFor="email" className="sr-only">
                     Email
                   </label>
@@ -174,7 +182,7 @@ export default function Example() {
                   </button>
                 </form>
                 <p className="mt-3 text-sm text-gray-500">
-                  We care about the protection of your data. Read our
+                  We care about the protection of your data. Read our 
                   <a href="#" className="font-medium text-gray-900 underline">
                     Privacy Policy
                   </a>
@@ -230,5 +238,8 @@ export default function Example() {
         </main>
       </div>
     </div>
+
+
+
   )
 }
