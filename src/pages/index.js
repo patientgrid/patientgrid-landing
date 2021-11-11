@@ -5,9 +5,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 // data
 
+// Components
+import { Link } from "gatsby"
+
 // Images
 import LogoShortImg from '../images/logo_short_patientgrid_multi.svg'
+import LogoWhite from '../images/logo_patientgrid_white.svg'
 import LogoShortWhite from '../images/logo_short_patientgrid_white.svg'
+import LogoGreyMed from '../images/logo_patientgrid_grey_med.svg'
 import LogoShortGreyMed from '../images/logo_short_patientgrid_grey_med.svg'
 import LandingIllustration from '../images/landing_illustration.png'
 
@@ -95,26 +100,26 @@ const features = [
 
 const footerNavigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Insights', href: '#' },
+//    { name: 'Marketing', href: '#' },
+//    { name: 'Analytics', href: '#' },
+//    { name: 'Insights', href: '#' },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
+//    { name: 'Pricing', href: '#' },
+//    { name: 'Documentation', href: '#' },
+//    { name: 'Guides', href: '#' },
   ],
   company: [
     { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+//    { name: 'Blog', href: '#' },
+//    { name: 'Jobs', href: '#' },
+//    { name: 'Press', href: '#' },
+//    { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+//    { name: 'Claim', href: '#' },
+    { name: 'Privacy', href: '/privacy' },
+//    { name: 'Terms', href: '#' },
   ],
   social: [
     {
@@ -147,7 +152,7 @@ export default function Landing() {
                     <span className="sr-only">Workflow</span>
                     <img
                       className="h-8 w-auto sm:h-10"
-                      src={LogoShortWhite}
+                      src={LogoWhite}
                       alt=""
                     />
                   </a>
@@ -292,9 +297,9 @@ export default function Landing() {
                         </div>
                         <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                         We care about the protection of your data. Read our{' '}
-                          <a href="#" className="font-medium text-white">
+                          <Link to="/privacy" className="font-medium text-white">
                             privacy policy
-                          </a>
+                          </Link>
                           .
                         </p>
                       </form>
@@ -368,7 +373,7 @@ export default function Landing() {
               <div className="space-y-8 xl:col-span-1">
                 <img
                   className="h-10"
-                  src={LogoShortGreyMed}
+                  src={LogoGreyMed}
                   alt="Company name"
                 />
                 <p className="text-gray-500 text-base">
@@ -428,9 +433,9 @@ export default function Landing() {
                     <ul role="list" className="mt-4 space-y-4">
                       {footerNavigation.legal.map((item) => (
                         <li key={item.name}>
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                          <Link to={item.href} className="text-base text-gray-500 hover:text-gray-900">
                             {item.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
