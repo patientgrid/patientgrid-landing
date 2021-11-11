@@ -2,3 +2,13 @@ node_modules/
 .cache/
 public
 .DS_Store
+
+# Yarn specific
+# not using "zero installs"
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
