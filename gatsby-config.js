@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "patientgrid-landing",
+    siteUrl: "https://www.patientgrid.io",
+    title: "Patient Grid - Helping doctors improve patient satisfaction and retention",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/logo_short_patientgrid_multi@512.png",
       },
     },
     "gatsby-plugin-mdx",
