@@ -1,20 +1,24 @@
+// Base imports
+import * as React from "react"
+import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 
-// assets
+// Assets
 import {
   MenuIcon,
   XIcon,
 } from '@heroicons/react/outline'
-
 import LogoWhite from '../images/logo_patientgrid_white.svg'
 import LogoShortWhite from '../images/logo_short_patientgrid_white.svg'
 
+// Data
 const navigation = []
 //  { name: 'Product', href: '#' },
 //  { name: 'Features', href: '#' },
 //  { name: 'Marketplace', href: '#' },
 //  { name: 'Company', href: '#' },
 
+// Layout
 function Navigation(props) {
   return (
     <Popover as="header" className="relative">
