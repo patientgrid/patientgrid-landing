@@ -57,7 +57,7 @@ export default function Navigation(props) {
             </div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <a href="#" className="text-base font-medium text-white hover:text-gray-300">
+            <a href="https://auth.mypatientgrid.com/login?client_id=7iluf81j9punkr03s8mn9g1pev&response_type=code&scope=email+openid&redirect_uri=https://prod.mypatientgrid.com/inbox" className="text-base font-medium text-white hover:text-gray-300">
               Log in
             </a>
             <a
