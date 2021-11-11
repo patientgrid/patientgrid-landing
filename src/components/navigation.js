@@ -19,7 +19,7 @@ const navigation = []
 //  { name: 'Company', href: '#' },
 
 // Layout
-function Navigation(props) {
+export default function Navigation(props) {
   return (
     <Popover as="header" className="relative">
       <div className="bg-gray-900 pt-6">

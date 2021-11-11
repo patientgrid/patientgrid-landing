@@ -4,6 +4,7 @@ import * as React from "react"
 export default function Privacy() {
     return (
         <div className="bg-white">
+          <div className="relative overflow-hidden">
 Our Company Privacy Policy
 Our Company is part of the Our Company Group which includes Our Company International and Our Company Direct. This privacy policy will explain how our organization uses the personal data we collect from you when you use our website.
 
@@ -126,6 +127,6 @@ Should you wish to report a complaint or if you feel that Our Company has not ad
 Email:
 
 Address
-
+</div>
 </div>)
 }
