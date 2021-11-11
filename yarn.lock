@@ -7417,6 +7417,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "gatsby-core-utils@npm:3.1.2"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    file-type: ^16.5.3
+    fs-extra: ^10.0.0
+    got: ^11.8.2
+    node-object-hash: ^2.3.9
+    proper-lockfile: ^4.1.2
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: eb14f70c9374f500ff8f56bf7cb7609a486dd6e10928ae870dcda128f1f12554d8406b71a9ede317d9e86369e4787fc1241e5cf61a2747f403e26b7c32b7336e
+  languageName: node
+  linkType: hard
+
 "gatsby-graphiql-explorer@npm:^2.1.0":
   version: 2.1.0
   resolution: "gatsby-graphiql-explorer@npm:2.1.0"
@@ -7510,9 +7528,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "gatsby-plugin-mdx@npm:3.1.0"
+"gatsby-plugin-mdx@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "gatsby-plugin-mdx@npm:3.1.3"
   dependencies:
     "@babel/core": ^7.15.5
     "@babel/generator": ^7.15.4
@@ -7530,7 +7548,7 @@ __metadata:
     escape-string-regexp: ^1.0.5
     eval: ^0.1.4
     fs-extra: ^10.0.0
-    gatsby-core-utils: ^3.1.0
+    gatsby-core-utils: ^3.1.2
     gray-matter: ^4.0.2
     json5: ^2.1.3
     loader-utils: ^1.4.0
@@ -7558,7 +7576,7 @@ __metadata:
     gatsby: ^4.0.0-next
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
-  checksum: 4dbe8eb99006a873f7fd0011a990aeac50c89298feee95aa87c85833fe819cd816d7c982f7f291052fef64884e1c2c448c7ff4c47f577253c40183f28ed75b75
+  checksum: 26324f17b55cfb834db26aabc8736665e6f855999da699c600d43b443a853ebb424c7045853f201a3f290bfb320ca10283c93236e5788051bbf6ff6624991aa9
   languageName: node
   linkType: hard
 
@@ -12605,7 +12623,7 @@ __metadata:
     gatsby: ^4.1.0
     gatsby-plugin-image: ^2.1.0
     gatsby-plugin-manifest: ^4.1.0
-    gatsby-plugin-mdx: ^3.1.0
+    gatsby-plugin-mdx: ^3.1.3
     gatsby-plugin-postcss: ^5.1.0
     gatsby-plugin-sharp: ^4.1.1
     gatsby-plugin-sitemap: ^5.1.0
