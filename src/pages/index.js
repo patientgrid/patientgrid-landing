@@ -1,9 +1,6 @@
 // Base imports
 import * as React from "react"
 
-// Images
-import LogoGreyMed from '../images/logo_patientgrid_grey_med.svg'
-
 // Assets
 import {
   CalendarIcon,
@@ -17,6 +14,7 @@ import {
 // Components
 import { Link } from "gatsby"
 import Navigation from '../components/navigation'
+import Footer from '../components/footer'
 
 // Data
 const features = [
@@ -55,26 +53,26 @@ const features = [
 
 const footerNavigation = {
   solutions: [
-//    { name: 'Marketing', href: '#' },
-//    { name: 'Analytics', href: '#' },
-//    { name: 'Insights', href: '#' },
+    //    { name: 'Marketing', href: '#' },
+    //    { name: 'Analytics', href: '#' },
+    //    { name: 'Insights', href: '#' },
   ],
   support: [
-//    { name: 'Pricing', href: '#' },
-//    { name: 'Documentation', href: '#' },
-//    { name: 'Guides', href: '#' },
+    //    { name: 'Pricing', href: '#' },
+    //    { name: 'Documentation', href: '#' },
+    //    { name: 'Guides', href: '#' },
   ],
   company: [
     { name: 'About', href: '#' },
-//    { name: 'Blog', href: '#' },
-//    { name: 'Jobs', href: '#' },
-//    { name: 'Press', href: '#' },
-//    { name: 'Partners', href: '#' },
+    //    { name: 'Blog', href: '#' },
+    //    { name: 'Jobs', href: '#' },
+    //    { name: 'Press', href: '#' },
+    //    { name: 'Partners', href: '#' },
   ],
   legal: [
-//    { name: 'Claim', href: '#' },
+    //    { name: 'Claim', href: '#' },
     { name: 'Privacy', href: '/privacy' },
-//    { name: 'Terms', href: '#' },
+    //    { name: 'Terms', href: '#' },
   ],
   social: [
     {
@@ -95,7 +93,7 @@ export default function Landing() {
       <div className="relative overflow-hidden">
 
         {/* Navigation section */}
-        <Navigation/>
+        <Navigation />
 
         {/* Hero section */}
         <main>
@@ -104,18 +102,18 @@ export default function Landing() {
               <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                   <div className="lg:py-24">
-                  <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
-                    Coming soon
-                  </span>
-                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Practice to Patient communications</span>
-                    <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
-                      reinvented
+                    <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
+                      Coming soon
                     </span>
-                  </h1>
+                    <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                      <span className="block">Practice to Patient communications</span>
+                      <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
+                        reinvented
+                      </span>
+                    </h1>
                     <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                    Patient Grid's comprehensive patient communication solution reduces no-shows, 
-                    backfills cancellations, and maximizes referral conversions, all with zero staff effort.
+                      Patient Grid's comprehensive patient communication solution reduces no-shows,
+                      backfills cancellations, and maximizes referral conversions, all with zero staff effort.
                     </p>
 
                     <div className="mt-10 sm:mt-12">
@@ -144,7 +142,7 @@ export default function Landing() {
                           </div>
                         </div>
                         <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                        We care about the protection of your data. Read our{' '}
+                          We care about the protection of your data. Read our{' '}
                           <Link to="/privacy" className="font-medium text-white">
                             privacy policy
                           </Link>
@@ -154,7 +152,7 @@ export default function Landing() {
                     </div>
 
 
-                    
+
                   </div>
                 </div>
                 <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
@@ -180,122 +178,38 @@ export default function Landing() {
                 Complete solution to drive patient satisfaction and retention
               </p>
               <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-              We help practices increase revenue using our patient centered communications platform.
+                We help practices increase revenue using our patient centered communications platform.
               </p>
               <div className="mt-12">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {features.map((feature) => (
-                  <div key={feature.name} className="pt-6">
-                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                      <div className="-mt-6">
-                        <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                          </span>
+                    <div key={feature.name} className="pt-6">
+                      <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                        <div className="-mt-6">
+                          <div>
+                            <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                              <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                            </span>
+                          </div>
+                          <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{feature.name}</h3>
+                          <p className="mt-5 text-base text-gray-500">
+                            {feature.description}
+                          </p>
                         </div>
-                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{feature.name}</h3>
-                        <p className="mt-5 text-base text-gray-500">
-                          {feature.description}
-                        </p>
                       </div>
                     </div>
-                  </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-
-       
 
           {/* End of main section */}
         </main>
 
+          {/* Footer */}
+        <Footer />
 
-        <footer className="bg-gray-50" aria-labelledby="footer-heading">
-          <h2 id="footer-heading" className="sr-only">
-            Footer
-          </h2>
-          <div className="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
-            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-8 xl:col-span-1">
-                <img
-                  className="h-10"
-                  src={LogoGreyMed}
-                  alt="Company name"
-                />
-                <p className="text-gray-500 text-base">
-                  Helping doctors improve patient satisfaction.
-                </p>
-                <div className="flex space-x-6">
-                  {footerNavigation.social.map((item) => (
-                    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.solutions.map((item) => (
-                        <li key={item.name}>
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.support.map((item) => (
-                        <li key={item.name}>
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.company.map((item) => (
-                        <li key={item.name}>
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.legal.map((item) => (
-                        <li key={item.name}>
-                          <Link to={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 border-t border-gray-200 py-8">
-              <p className="text-base text-gray-400 xl:text-center">&copy; 2021 Patient Grid, LLC. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   )
