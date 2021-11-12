@@ -1,6 +1,12 @@
 # Patient Grid landing site
 
-Built with Gatsby. 
+Built with Gatsby.
+
+Uses [TailwindCSS](https://tailwindcss.com/) for markup.
+
+Most of the web is constructed with [TailwindUI](https://tailwindui.com/) components.
+
+Using netlify to deploy.
 
 
 ## 🚀 Quick start
@@ -16,6 +22,12 @@ Built with Gatsby.
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.js` to see your site update in real-time!
+
+3.  **Deploy**
+
+    Commit changes and push master branch. [patientgrid.io](https://patientgrid.io) will be updated by netlify.
+
+
 
 ## Resources
 
