@@ -15,6 +15,7 @@ import {
 import { Link } from "gatsby"
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
+import SEO from '../components/seo'
 
 // Data
 const features = [
@@ -92,6 +93,9 @@ export default function Landing() {
     <div className="bg-white">
       <div className="relative overflow-hidden">
 
+        {/* SEO meta section */}
+        <SEO/>
+        
         {/* Navigation section */}
         <Navigation />
 
