@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/logo_short_patientgrid_multi@512.png",
+        icon: "src/images/logo_short_patientgrid_blue@512.png",
       },
     },
     "gatsby-plugin-mdx",
