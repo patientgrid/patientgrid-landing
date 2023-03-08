@@ -1,6 +1,6 @@
 node_modules/
 .cache/
-public
+#public   # For now we ignore public to be able to deploy html with no buid step
 .DS_Store
 .idea/
 
