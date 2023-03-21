@@ -2,5 +2,3 @@
 
 publish = "public/"
 
-# Default build command.
-command = "echo 'Starting and finishing landing page build'"
