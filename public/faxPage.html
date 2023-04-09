@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linked tailwind.css -->
+    <link rel="stylesheet" href="./css/tailwind.css" />
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- linked style.css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Fax</title>
+  </head>
+  <body class="bg-nav-300 overflow-x-hidden box-border">
+    <!-- navbar -->
+    <section class="navbar bg-nav-100">
+      <div
+        class="container mx-auto px-4 sm:px-2 py-8 flex justify-between items-center"
+      >
+        <div class="logo">
+          <img src="../images/logo.png" alt="logo" class="h-7 lg:h-full" />
+        </div>
+
+        <div class="menu md:flex justify-center items-center gap-10 hidden">
+          <a
+            href="#"
+            class="capitalize font-poppins font-medium text-sm lg:text-base"
+            >products</a
+          >
+          <a
+            href="#"
+            class="capitalize font-poppins font-medium text-sm lg:text-base"
+            >plans</a
+          >
+
+          <div class="dropDown relative">
+            <a
+              href="#"
+              class="flex justify-center items-center capitalize font-poppins font-medium text-sm lg:text-base"
+              onclick="moreFun()"
+              >More
+
+              <svg
+                class="-mr-1 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+
+            <ul
+              class="drop absolute bg-gray-200 w-72 top-10 p-3 rounded-md hidden"
+            >
+              <li class="w-full">
+                <a
+                  href="#"
+                  class="w-full inline-block capitalize font-poppins font-medium text-sm lg:text-base p-2 hover:bg-slate-50"
+                  >About Us</a
+                >
+              </li>
+              <li class="w-full">
+                <a
+                  href="#"
+                  class="w-full inline-block capitalize font-poppins font-medium text-sm lg:text-base p-2 hover:bg-slate-50"
+                  >Projects</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="buttons hidden md:block">
+          <a
+            href="#"
+            class="capitalize font-poppins font-medium text-sm lg:text-base"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="capitalize font-poppins font-medium text-sm lg:text-base ml-6 text-white bg-nav-200 rounded-full px-7 py-4"
+            >Request a demo</a
+          >
+        </div>
+
+        <div class="menuBar md:hidden cursor-pointer" onclick="menuBar()">
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- mobile view menu bar -->
+    <div
+      class="mobileView w-screen h-screen hidden bg-blue-100 flex justify-center items-center flex-col z-10"
+    >
+      <div class="menuView flex justify-center items-center flex-col gap-10">
+        <a
+          href="#"
+          class="capitalize font-poppins font-medium text-sm lg:text-base"
+          >products</a
+        >
+        <a
+          href="#"
+          class="capitalize font-poppins font-medium text-sm lg:text-base"
+          >plans</a
+        >
+
+        <div class="dropDown relative">
+          <a
+            href="#"
+            class="flex justify-center items-center capitalize font-poppins font-medium text-sm lg:text-base"
+            onclick="moreFun1()"
+            >More
+
+            <svg
+              class="-mr-1 h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <ul
+            class="dropBtn absolute bg-gray-200 w-72 top-10 left-[-7.5rem] text-center p-3 rounded-md hidden z-10"
+          >
+            <li class="w-full">
+              <a
+                href="#"
+                class="w-full inline-block capitalize font-poppins font-medium text-sm lg:text-base p-2 hover:bg-slate-50"
+                >About Us</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#"
+                class="w-full inline-block capitalize font-poppins font-medium text-sm lg:text-base p-2 hover:bg-slate-50"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="buttons flex justify-center items-center flex-col gap-10 mt-10"
+      >
+        <a
+          href="#"
+          class="capitalize font-poppins font-medium text-sm lg:text-base"
+          >Login</a
+        >
+        <a
+          href="#"
+          class="capitalize font-poppins font-medium text-sm lg:text-base ml-6 text-white bg-nav-200 rounded-full px-7 py-4"
+          >Request a demo</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero-section -->
+    <section class="bg-gradient-static pt-24 min-h-[583px] mb-24">
+      <div class="container sm:mx-auto  flex sm:justify-evenly  justify-center items-center sm:flex-nowrap flex-wrap gap-y-5 sm:gap-y00">
+        <div class="flex flex-col gap-7 mx-3">
+          <p
+            class="font-poppins text-white font-medium sm:text-[45px] text-4xl"
+          >
+            Simple And Secure<br />
+            Cloud Fax System <br /><span class="font-bold">For Healthcare</span>
+          </p>
+          <p class="font-poppins text-white font-medium sm:text-xl text-[16px]">
+            HIPAA-compliant digital fax designed <br />
+            for collaboration. We integrate with all <br />
+            EHRs. Save time on repetitive tasks.
+          </p>
+          <a href="#" class="flex gap-6 items-center">
+            <p class="font-poppins font-medium text-white text-[22px]">
+              Get Started
+            </p>
+            <img src="../images/fax-arrow.png" alt="start"  />
+          </a>
+        </div>
+
+        <div class=" ">
+          <img src="../images/fax1.svg" alt="fax" class=" h-auto mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-1 -->
+    <section class="mb-[100px]">
+      <div
+        class="container mx-auto flex justify-center gap-[70px] items-center flex-wrap"
+      >
+        <img src="../images/fax-2.png" alt="" />
+        <div class="flex flex-col gap-7">
+          <span class="font-poppins text-black font-medium text-[40px]"
+            >No more busy lines</span
+          >
+          <p class="font-poppins text-lg text-[#000000B2] font-normal">
+            Don't let capacity bettlenecks hinder your<br />
+            productivity. Our online fax solution ensures <br />
+            that your business runs smoothly, even <br />
+            during high-volume periods. Patient Grid <br />
+            eFax scales with your needs and can<br />
+            handle unlimited concurring requests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-2 -->
+    <section class="mb-[100px]">
+      <div
+        class="container mx-auto bg-nav-500 min-h-[670px] rounded-[30px] pt-[71.9px]"
+      >
+        <p
+          class="text-center mb-[30px] font-poppins font-medium text-[40px] text-black mx-auto"
+        >
+          Collaboration breeds success
+        </p>
+        <p
+          class="text-center font-poppins font-normal text-[#000000B2] text-lg mb-[64.1px]"
+        >
+          Faxes show in a shared inbox and tagged as pending or processed.
+          Everyone knows what <br />
+          to work on next. Never lose faxes again.
+        </p>
+
+        <div
+          class="container flex items-center justify-center lg:flex-row flex-col px-24"
+        >
+          <img
+            src="../images/fax-status-2.png"
+            alt="fax status"
+            class="w-full h-auto object-contain"
+          />
+          <svg
+            class="rotate-90 md:rotate-0"
+            width="40"
+            height="25"
+            viewBox="0 0 40 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1.36108"
+              y1="8.99512"
+              x2="39"
+              y2="8.99512"
+              stroke="black"
+            />
+            <line
+              y1="-0.5"
+              x2="10.5104"
+              y2="-0.5"
+              transform="matrix(0.516484 -0.856297 0.212193 0.977228 1 10)"
+              stroke="black"
+            />
+            <line
+              x1="38.6389"
+              y1="16.0049"
+              x2="0.999954"
+              y2="16.0049"
+              stroke="black"
+            />
+            <line
+              y1="-0.5"
+              x2="10.5104"
+              y2="-0.5"
+              transform="matrix(-0.516484 0.856297 -0.212193 -0.977228 39 15)"
+              stroke="black"
+            />
+          </svg>
+
+          <img
+            src="../images/fax-status1.png"
+            alt="fax status"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-3 -->
+    <section class="mb-[100px]">
+      <div
+        class="container mx-auto min-h-[752px] bg-nav-200 rounded-[30px] pt-[41px] px-4 md:px-0 relative overflow-hidden"
+      >
+        <img
+          src="../images/corner-img.png"
+          alt=""
+          class="absolute top-0 left-0 z-0 w-[10%] h-auto"
+        />
+        <img
+          src="../images/corner-img.png"
+          alt=""
+          class="absolute right-0 bottom-0 rotate-180 z-0  w-[10%] h-auto"
+        />
+        <p
+          class="text-center mb-[30px] font-poppins font-medium text-[38px] sm:text-[40px] text-white mx-auto z-1 relative"
+        >
+          One-click Upload to your EHR
+        </p>
+        <p
+          class="text-center font-poppins font-normal text-white text-[16px] sm:text-lg mb-[28px] z-1 relative"
+        >
+          No more printing or scanning. Add files to your patient chart directly
+          from Patient Grid with a <br />
+          simple click. Spend less time on administrative tasks, and more time
+          helping patients.
+        </p>
+        <div class="flex justify-center z-1 relative">
+          <img src="../images/upload-profile.svg" alt="upload profile" />
+        </div>
+      </div>
+    </section>
+
+    <!-- section-4 -->
+    <section class="mb-[100px]">
+      <div
+        class="container mx-auto justify-items-center min-h-[870px] grid items-center grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/confirmation.png" alt="confirmation" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Delivery confirmation
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            See what's happening with your faxes at any time. No <br />more
+            wandering if your faxes<br />
+            are being received.
+          </p>
+        </div>
+
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/retry.png" alt="retry" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Automated retry
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            Sending is retried <br />automatically to make sure all<br />
+            faxes are delivered.
+          </p>
+        </div>
+
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/adoption.png" alt="adoption" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Easy Adoption
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            Regardless of your staff's <br />
+            technical skills, adopting our <br />solution takes needs no<br />
+            training.
+          </p>
+        </div>
+
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/coverpage.png" alt="coverpage" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Custom cover page
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            Fully costomisable cover<br />
+            page.
+          </p>
+        </div>
+
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/archiving.png" alt="archiving" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Long term archiving
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            We ensure that your fax <br />
+            communications meet the<br />
+            highest standards of data<br />
+            security and comply with<br />
+            industry regulations.
+          </p>
+        </div>
+
+        <div class="h-[347px] w-[310px] shadow-box rounded-[15px] pt-[44px]">
+          <div
+            class="rounded-full bg-[#2397f3] w-[70px] h-[70px] flex justify-center items-center mx-auto mb-[22px]"
+          >
+            <img src="../images/archiving.png" alt="archiving" />
+          </div>
+          <p
+            class="font-poppins text-[20px] text-black font-semibold text-center mb-[11px]"
+          >
+            Signed BBA
+          </p>
+          <p
+            class="mx-auto w-[277px] font-poppins text-center font-normal text-[#282828B0]"
+          >
+            Describe what this feature <br />
+            does, and how it benefits<br />
+            your customers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-5 -->
+    <section class="mb-[100px]">
+      <div class="container mx-auto flex justify-evenly flex-wrap">
+        <img src="../images/refferal.png" alt="referral" />
+        <div class="flex flex-col justify-center px-4 mt-9 sm:mt-0">
+          <p
+            class="font-poppins sm:text-[40px] text-[35px] text-black font-medium mb-[30px]"
+          >
+            Minimize refferal leakage <br />
+            and increase market share
+          </p>
+          <p
+            class="font-poppins sm:text-lg text-[16px] font-normal text-[#000000]"
+          >
+            Don't let capacity bottlenecks hinder your <br />
+            productivity. Our online fax solution ensures that your <br />
+            business runs smoothly, even during high-volume<br />
+            periods. Patient Grid efax scales with your needs and <br />
+            can handle unlimited concurring requests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-6 -->
+    <section class="mb-[100px] ">
+      <div
+        class="bg-nav-700 rounded-[30px] container mx-auto relative min-h-[378px] overflow-hidden "
+      >
+        <img
+          src="../images/blue-corner.png"
+          alt="corner"
+          class="absolute left-0 top-0 z-0  w-[10%] h-auto"
+        />
+        <img
+          src="../images/blue-corner.png"
+          alt="corner"
+          class="absolute right-0 bottom-0 rotate-180 z-0  w-[10%] h-auto"
+        />
+        <div class="flex justify-center z-2 relative items-center flex-wrap ">
+          <img
+            src="../images/entity.png"
+            alt="entity"
+            class="sm:block "
+          />
+          <div class="flex flex-col justify-center items-center ">
+            <span
+              class="font-poppins text-[40px] text-center text-black font-medium"
+            >
+              Ready to improve your fax <br />
+              management
+            </span>
+            <p
+              class="font-poppins text-lg text-[#8E8787] font-normal text-center mt-[27px] mb-[30px]"
+            >
+              Discover how Patient Grid enhances the <br />
+              experience for providers, staff, and patients.
+            </p>
+            <a
+              href="#"
+              class="capitalize font-poppins font-medium text-sm lg:text-base ml-6 text-white bg-nav-200 rounded-full px-7 py-4 mb-6 md:mb-0"
+              >Request a demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footerSection bg-nav-200 px-4 pt-24 pb-4">
+      <div class="container mx-auto px-3">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <!-- column-1 -->
+          <div class="col-1">
+            <img src="../images/footer-logo.png" alt="footer-logo" />
+            <p
+              class="font-poppins font-normal text-base lg:text-lg leading-[27px] text-white w-2/3 xl:pr-10 py-6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+
+            <div class="socialImg flex gap-4">
+              <a href="#"><img src="../images/fab.png" alt="facebook" /></a>
+              <a href="#"
+                ><img src="../images/twitter-1.png" alt="twitter-1"
+              /></a>
+              <a href="#"><img src="../images/insta-1.png" alt="insta-1" /></a>
+            </div>
+          </div>
+
+          <!-- column 2 -->
+          <div class="col-2">
+            <div class="main sm:pl-16 xl:pl-32">
+              <div class="sub-col-1">
+                <a href="#" class="flex items-center gap-3">
+                  <img src="../images/phone.png" alt="phone" />
+                  <p
+                    class="font-poppins font-normal text-base lg:text-lg text-white"
+                  >
+                    +91-8853923455
+                  </p>
+                </a>
+              </div>
+
+              <div class="sub-col-2 my-7">
+                <a href="#" class="flex items-center gap-3">
+                  <img src="../images/whatsapp.png" alt="whatsapp" />
+                  <p
+                    class="font-poppins font-normal text-base lg:text-lg text-white"
+                  >
+                    +91-4567895478
+                  </p>
+                </a>
+              </div>
+
+              <div class="sub-col-3">
+                <a href="#" class="flex items-center gap-3">
+                  <img src="../images/email.png" alt="email" />
+                  <p
+                    class="font-poppins font-normal text-base lg:text-lg text-white"
+                  >
+                    patientgrid@gmail.com
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- column 3 -->
+          <div class="col-3 flex flex-col items-start lg:items-end">
+            <div class="text-left flex justify-start items-start">
+              <p
+                class="text-white font-poppins font-normal text-lg lg:text-xl leading-[60px] text-left pr-[84px] pb-0 lg:pb-5"
+              >
+                Subscribe Newsletter
+              </p>
+            </div>
+
+            <div class="input flex relative">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="py-2 w-[301px] h-[50px] rounded-[30px] font-poppins font-normal text-lg leading-3[30px] text-para2 px-6"
+              />
+              <a href="#"
+                ><img
+                  src="../images/newsletter.png"
+                  alt="newsletter"
+                  class="absolute right-0"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- divider -->
+      <div class="h-[2px] w-full bg-white my-4"></div>
+
+      <div class="footerMenu flex justify-center items-center gap-10">
+        <a
+          href="#"
+          class="text-white font-poppins font-normal text-base leading-[25px]"
+          >Products</a
+        >
+        <a
+          href="#"
+          class="text-white font-poppins font-normal text-base leading-[25px]"
+          >Plans</a
+        >
+        <a
+          href="#"
+          class="text-white font-poppins font-normal text-base leading-[25px]"
+          >More</a
+        >
+      </div>
+
+      <div class="h-[2px] w-full bg-white my-4"></div>
+
+      <div class="copyright text-center">
+        <p class="font-poppins text-white text-base leading-[25px] font-normal">
+          &#169; Copyright 2023.All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let drop = document.querySelector(".drop");
+      let dropBtn = document.querySelector(".dropBtn");
+      let buttons = document.querySelector(".buttons");
+      let mobileView = document.querySelector(".mobileView");
+
+      function moreFun() {
+        drop.classList.toggle("hidden");
+      }
+
+      function moreFun1() {
+        dropBtn.classList.toggle("hidden");
+      }
+
+      function menuBar() {
+        mobileView.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
